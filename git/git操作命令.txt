@@ -1,0 +1,17 @@
+1.初始化git的命令，在待管理的文件根目录下
+git init
+2.查看文件状态的命令
+git status -s
+3.一次性将文件加入缓存区的命令
+git add .
+4.将文件提交到git仓库的命令以及跳过缓存区提交仓库的命令
+git commit 文件名 -m '描述信息'
+git commit -a -m '描述信息'
+5.删除git工作区和仓库的命令以及只删除仓库文件的命令
+git rm -f 文件名
+git rm --cached 文件名 
+6.查看日志操作、显示多少条、显示版本ID信息
+git log
+git log -2
+git log --pretty=oneline
+7.切换版本的操作
