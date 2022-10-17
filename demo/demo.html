@@ -402,31 +402,18 @@
 东昌府融媒
 爱安丘`
             let arr = str.replace(/\s/g, ',').split(',');
-            console.log(arr);
-            let str2 = `西海岸新区
-即墨区融媒体中心
-莱西市融媒体中心
-平度市融媒体中心
-城阳区融媒体中心
-市南区融媒体中心
-李沧区融媒体中心
-市北区融媒体中心
-莒县融媒体中心
-五莲县融媒体中心
-岚山区融媒体中心
-东港区融媒体中心
-环翠区融媒体中心
-乳山市融媒体中心
-崂山区融媒体中心
-荣成市融媒体中心
-文登区融媒体中心
-胶州市融媒体中心
-威海市融媒体中心`
-            let arr1 = str2.replace(/\s/g, ',').split(',');
-            let arr2 = arr1.map(function(item) {
-                return item.slice(0, 2);
-            })
-            console.log(arr2);
+            let arr1 = ['西海', '即墨', '莱西', '平度', '城阳', '市南', '李沧', '市北', '莒县', '五莲', '岚山', '东港', '环翠', '乳山', '崂山', '荣成', '文登', '胶州', '威海']
+            let arr3 = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr1.length; j++) {
+                    if (arr[i].indexOf(arr1[j]) !== -1) {
+                        arr3.push(arr1[j]);
+                        break;
+                    }
+                }
+            }
+            let arr4 = [...new Set(arr3)];
+            console.log(arr4);
         </script>
     </body>
 
