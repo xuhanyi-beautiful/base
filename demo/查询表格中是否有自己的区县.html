@@ -1,0 +1,31 @@
+<!DOCTYPEhtml>
+<htmllang="en">
+
+    <head>
+        <metacharset="UTF-8">
+            <metahttp-equiv="X-UA-Compatible" content="IE=edge">
+                <metaname="viewport" content="width=device-width,initial-scale=1.0">
+                    <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            let str = ``
+            let arr = str.replace(/\s/g, ',').split(',');
+            //arr1填写自己对应的区县
+            let arr1 = []
+            let arr3 = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr1.length; j++) {
+                    if (arr[i].indexOf(arr1[j]) !== -1) {
+                        arr3.push(arr1[j]);
+                        break;
+                    }
+                }
+            }
+            let arr4 = [...new Set(arr3)];
+            console.log(arr4);
+        </script>
+    </body>
+
+    </html>
