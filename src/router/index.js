@@ -1,19 +1,40 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    nanme: 'Home',
+    component: () => import('../views/home/HomeComponent.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/login',
+    nanme: 'Login',
+    component: () => import('../views/login/LoginComponent.vue')
+  },
+  {
+    path: '/register',
+    nanme: 'Register',
+    component: () => import('../views/register/RegisterComponent.vue')
+  },
+  {
+    path: '/cart',
+    nanme: 'Cart',
+    component: () => import('../views/cart/CartComponent.vue')
+  },
+  {
+    path: '/order',
+    nanme: 'Order',
+    component: () => import('../views/order/OrderComponent.vue')
+  },
+  {
+    path: '/createaddress',
+    nanme: 'CreateAddress',
+    component: () => import('../views/mine/CreateAddress.vue')
+  },
+  {
+    path: '/addressmanagement',
+    nanme: 'AddressManagement',
+    component: () => import('../views/mine/AddressManagement.vue')
   }
 ]
 
